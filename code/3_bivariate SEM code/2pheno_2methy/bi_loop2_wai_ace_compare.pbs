@@ -1,0 +1,13 @@
+#PBS -N bi_loop2_wai_ace_compare
+#PBS -l nodes=1:ppn=5
+#PBS -l walltime=500:00:00
+#PBS -o /public/home/hongxming/bmi_ace
+#PBS -e /public/home/hongxming/bmi_ace
+#PBS -m abe
+#PBS -M hong_xuanming@163.com
+#!/bin/sh
+
+source ~/.bashrc
+
+cd /public/home/hongxming/bmi_ace
+R --no-save --args < bi_loop2_wai_ace_compare.R > bi_loop2_wai_ace_compare.log "$var" "$model"
